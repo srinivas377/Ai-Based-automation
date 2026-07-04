@@ -1,73 +1,108 @@
-# Welcome to your Lovable project
+  # 🧭 Career Compass — Autonomous AI Career Command Center
 
-## Project info
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-## How can I edit this code?
+> **A Next-Gen, Recruiter-Ready Portfolio Showcase.**  
+> *Empowering job seekers by replacing fragmented spreadsheets and static application processes with a coordinated network of 12 autonomous AI agents.*
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🎯 Project Overview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+**Career Compass** is an advanced, production-grade Career Management Platform built to demonstrate high-fidelity UI design, complex React state coordination, and autonomous AI system mock-ups. 
 
-Changes made via Lovable will be committed automatically to this repo.
+Instead of traditional, static dashboards, Career Compass introduces an **autonomous agent swarm architecture**. Here, twelve specialized virtual agents collaborate concurrently to optimize resumes, evaluate skills, map educational pathways, chat as mock mentors, scrape mock market openings, and manage job application pipelines.
 
-**Use your preferred IDE**
+### 🌟 Live Application Highlights (What's in Localhost)
+*   **The Command Center:** A glassmorphic dashboard showcasing real-time career readiness, an active application Kanban pipeline, learning progress, and telemetry logs of background agents.
+*   **Interactive Agent Orbit:** A custom, physics-like CSS/SVG orbit visualization demonstrating how the autonomous agents revolve around, monitor, and update the user's profile.
+*   **ATS Resume Lab:** An interactive workspace allowing users to upload resumes, review automated ATS match scores (broken down by Keywords, Structure, and Impact), inspect version history, and view optimization suggestions.
+*   **Real-time AI Career Mentor:** A markdown-supported chat console where users query their Agent Network for resume feedback, interview prep, or career roadmaps with live stream-like UI states.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🏗️ Technical Architecture & Agent Swarm
 
-Follow these steps:
+At the core of the system is the **Autonomous Agent Network**. The frontend simulates a decoupled, asynchronous agent messaging registry where each agent runs independently to tackle a specific domain:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```mermaid
+graph TD
+    User([User Profile & Command Center]) <--> Auto[Automation Agent: Core Orchestrator]
+    Auto <--> Memory[(Memory Agent: Context Store)]
+    
+    Auto --> Matching[Matching Agent: Job Fits]
+    Auto --> Skill[Skill Gap Agent: Diagnostics]
+    Auto --> Resume[Resume Agent: ATS Enhancer]
+    Auto --> Apply[Job Apply Agent: Submissions]
+    
+    Skill --> Roadmap[Roadmap Agent: Learning Paths]
+    Resume --> Feedback[Feedback Agent: Rejections] --> Improve[Improvement Agent: Profile Polisher]
+    Matching -.-> Score[ML Match Scoring]
+    Apply --> Pipeline[Active Job Pipeline]
 ```
 
-**Edit a file directly in GitHub**
+### The 12 Specialized Agents
+| Agent | Role / Domain | Core Simulation Capability |
+| :--- | :--- | :--- |
+| **🤖 Profile Agent** | Profile Consistency | Structures career details, certifications, and preferences. |
+| **📄 Resume Agent** | Resume Optimization | Aligns bullet points with target keywords to bypass ATS filters. |
+| **📈 Market Agent** | Trend Tracker | Scans technical job posting trends, salaries, and framework demands. |
+| **🎯 Matching Agent** | Compatibility Scorer | Computes role fit percentages against target parameters. |
+| **🧠 Skill Gap Agent**| Gap Detection | Identifies missing technologies and cross-references them to market trends. |
+| **🎓 Roadmap Agent** | Pathway Constructor | Automatically plots milestone-based courses and resources. |
+| **💬 Mentor Agent** | Strategy & Prep | Conducts conversational mock interviews and career planning. |
+| **💼 Job Apply Agent** | Application Delivery | Generates tailored application coverages and logs submissions. |
+| **🔄 Feedback Agent**| Rejection Analysis | Extracts insights from rejection letters to correct application strategies. |
+| **✨ Improvement Agent**| Auto-Refinement | Performs incremental edits on profiles based on feedback loops. |
+| **⚡ Automation Agent**| Network Coordinator | Sequences routines and orchestrates agent message-passing. |
+| **🗄️ Memory Agent** | Context Retention | Syncs chat sessions, historical versions, and active state variables. |
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🛠️ Technology Stack & Best Practices
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This codebase was developed following rigorous frontend guidelines:
 
-## What technologies are used for this project?
+*   **Frontend Library:** **React v18** with **Vite** as a lightning-fast build tool.
+*   **Language:** Strict **TypeScript** for type-safety across components, agents, and custom hooks.
+*   **Aesthetics & Design:** Glassmorphic layout using **Tailwind CSS**, Custom Animations, CSS Variables, and **lucide-react** for modern icon representation.
+*   **UI Components:** Built on top of accessible primitives using **shadcn/ui** presets.
+*   **Data Fetching & State:** **TanStack Query v5** (React Query) for robust cache management.
+*   **Database/Backend Integration:** Ready-to-go integration with **Supabase client** for remote data synchronization.
+*   **Testing Suite:** Integrates **Vitest** + **React Testing Library** for component verification.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚀 Getting Started
 
-## How can I deploy this project?
+To check out the Career Compass Command Center locally, follow these simple steps:
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Prerequisites
+*   [Node.js](https://nodejs.org/) (LTS recommended)
+*   [npm](https://www.npmjs.com/) or [Bun](https://bun.sh/)
 
-## Can I connect a custom domain to my Lovable project?
+### Installation
 
-Yes, you can!
+1. **Clone the repository:**
+   ```bash
+   git clone <YOUR_GIT_URL>
+   cd career-compass
+   ```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+2. **Install project dependencies:**
+   ```bash
+   npm install
+   ```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+3. **Start the local Vite dev server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+4. **Verify codebase tests:**
+   ```bash
+   npm run test
+   ```
+
+
